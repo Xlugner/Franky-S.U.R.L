@@ -1,0 +1,14 @@
+/* src/index.css */
+
+/* Directivas esenciales de Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos globales para el body (la fuente se define aquí) */
+body {
+  font-family: 'Inter', sans-serif; /* Aplica la fuente Inter a todo el body */
+  -webkit-font-smoothing: antialiased; /* Mejorar el suavizado de fuentes en WebKit */
+  -moz-osx-font-smoothing: grayscale; /* Mejorar el suavizado de fuentes en Firefox (Mac) */
+  /* El color de fondo principal se gestionará en el componente App.tsx */
+}
