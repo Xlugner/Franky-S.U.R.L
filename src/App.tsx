@@ -11,7 +11,7 @@ import AboutPage from './pages/About/AboutPage';
 import ContactPage from './pages/Contact/ContactPage';
 import HomePage from './pages/Home/HomePage';
 
-// Importaciones de páginas (Lazy Loaded)
+
 export default function App() {
   const [currentPage, setCurrentPage] = useState(window.location.pathname);
 

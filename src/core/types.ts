@@ -7,11 +7,22 @@ export type Service = {
   icon: React.ComponentType<{ className?: string }>;
 };
 
+export type ProjectDetails = {
+  area?: string;
+  duration?: string;
+  materials?: string[];
+};
+
 export type Project = {
-  id: number;
+  id: string | number;
   title: string;
-  category: string;
-  year: number;
-  imageUrl: string;
   description: string;
+  imageUrl: string;
+  gallery: string[];
+  tags?: string[];
+  categories: string[];
+  status?: 'Completado' | 'En progreso' | 'Planificado';
+  location?: string;
+  year?: string | number;
+  details?: ProjectDetails;
 };

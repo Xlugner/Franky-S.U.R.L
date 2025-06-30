@@ -26,7 +26,7 @@ const Navbar = ({ navigate }: { navigate: (path: string) => void }) => {
             className="flex-shrink-0 cursor-pointer p-2 rounded-md" 
             onClick={() => handleNavigate('/')}
           >
-            <h1 className="text-white text-3xl font-extrabold tracking-tight">
+            <h1 className="text-accent-gold text-3xl font-extrabold tracking-tight">
               Franky <span className="text-accent-gold">S.U.R.L.</span>
             </h1>
             <p className="text-gray-400 text-xs sm:text-sm tracking-widest uppercase">Herrería & Decoración</p>
