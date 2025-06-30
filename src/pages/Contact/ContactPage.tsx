@@ -1,6 +1,12 @@
 import { useState } from "react";
+import emailjs from '@emailjs/browser';
 import AnimatedPage from "../../components/ui/AnimatedPage";
-import { Phone,Send,MapPin } from "lucide-react";
+import { Phone, Send, MapPin, Mail } from "lucide-react";
+
+// Obtener las variables de entorno
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_47drsze';
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_48dmfl3';
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'cmoIvJCdONnoqUBZy';
 
 const ContactPage = () => {
     const [formData, setFormData] = useState({
@@ -16,15 +22,25 @@ const ContactPage = () => {
         setFormData(prev => ({ ...prev, [name]: value }));
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setStatus('sending');
-        // Simulate API call
-        setTimeout(() => {
-            console.log("Form submitted:", formData);
+
+        try {
+            await emailjs.send(
+                EMAILJS_SERVICE_ID,
+                EMAILJS_TEMPLATE_ID,
+                formData,
+                EMAILJS_PUBLIC_KEY
+            );
+            
             setStatus('success');
-            setFormData({ name: '', email: '', subject: '', message: '' }); // Clear form
-        }, 1500);
+            setFormData({ name: '', email: '', subject: '', message: '' });
+            setTimeout(() => setStatus(''), 3000);
+        } catch (error) {
+            console.error('Error al enviar el correo:', error);
+            setStatus('error');
+        }
     };
 
     return (
@@ -110,6 +126,9 @@ const ContactPage = () => {
                                 {status === 'success' && (
                                     <p className="mt-4 text-center text-green-400 font-semibold">¡Mensaje enviado con éxito!</p>
                                 )}
+                                {status === 'error' && (
+                                    <p className="mt-4 text-center text-red-400 font-semibold">Error al enviar el mensaje. Inténtalo de nuevo.</p>
+                                )}
                             </form>
                         </div>
 
@@ -122,7 +141,7 @@ const ContactPage = () => {
                                     <a href="tel:+34123456789" className="hover:text-accent-gold-light transition-colors">+34 123 456 789</a>
                                 </p>
                                 <p className="flex items-center">
-                                    <Send className="mr-4 h-6 w-6 text-accent-gold" /> 
+                                    <Mail className="mr-4 h-6 w-6 text-accent-gold" /> 
                                     <a href="mailto:info@frankyherreria.com" className="hover:text-accent-gold-light transition-colors">info@frankyherreria.com</a>
                                 </p>
                                 <p className="flex items-start">
@@ -131,9 +150,8 @@ const ContactPage = () => {
                                 </p>
                             </div>
                             <div className="mt-8">
-                                {/* Optional: Embed a map here */}
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3167.334468603417!2d-0.4578844846931551!3d37.99229987972033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd637956b9c9f2b1%3A0x6a5d4e1f7c2b3a1a!2sPlaza+de+Luceros%2C+Alicante!5e0!3m2!1ses!2ses!4v1678901234567!5m2!1ses!2ses"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3167.334468603417!2d-0.4578844846931551!3d37.99229987972033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd637956b9c9f2b1%3A0x6a5d4e1f7c2b3a1a!2sPlaza%20de%20Luceros%2C%20Alicante!5e0!3m2!1ses!2ses!4v1678901234567!5m2!1ses!2ses"
                                     width="100%"
                                     height="300"
                                     style={{ border: 0 }}
