@@ -1,4 +1,5 @@
 import React, { useState, useEffect, Suspense } from 'react';
+import WhatsAppButton from './components/ui/WhatsAppButton';
 import {  AnimatePresence } from 'framer-motion';
 
 // Importaciones de componentes
@@ -69,6 +70,7 @@ export default function App() {
         </Suspense>
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }
