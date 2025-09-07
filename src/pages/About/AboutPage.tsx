@@ -6,7 +6,7 @@ const AboutPage = () => (
             <div className="max-w-4xl mx-auto text-center">
                 <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">Sobre Nosotros</h2>
                 <p className="text-lg md:text-xl text-text-light leading-relaxed mb-8">
-                    En Herrerías Franky S.U.R.L., combinamos la tradición artesanal con la innovación tecnológica para ofrecer soluciones de metalistería de la más alta calidad. Con años de experiencia, nuestro equipo de expertos se dedica a transformar ideas en realidades duraderas y estéticas.
+                   En CONSTRUCCIONES, HERRERÍA Y DECORACIONES FRANKY S.U.R.L, combinamos la tradición artesanal con la innovación tecnológica para ofrecer soluciones de metalistería de la más alta calidad. Con años de experiencia, nuestro equipo de expertos se dedica a transformar ideas en realidades duraderas y estéticas.
                 </p>
                 <div className="bg-primary-dark p-8 rounded-xl shadow-xl border border-gray-700/50">
                     <h3 className="text-3xl font-bold text-accent-gold mb-4">Nuestra Misión</h3>

@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import type { Variants } from "framer-motion";
 import React, { useEffect, useState, useRef } from "react";
 
+
 //==============================================================================
 // Componente Typewriter
 //==============================================================================
@@ -75,7 +76,7 @@ const HeroBackground: React.FC = () => {
                 onLoadedData={() => setIsVideoLoaded(true)}
                 preload="metadata"
             >
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-welder-at-work-32243-large.mp4" type="video/mp4" />
+                <source src="../../assets/bg-video.mp4"  type="video/mp4" />
                 Tu navegador no soporta la etiqueta de video.
             </video>
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70 z-10"></div>

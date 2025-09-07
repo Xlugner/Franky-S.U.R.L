@@ -1,69 +1,77 @@
-# React + TypeScript + Vite
+# Herrerías Franky S.U.R.L
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sitio web profesional para la empresa de herrería artística y estructuras metálicas, desarrollado con React, TypeScript y Vite.
 
-Currently, two official plugins are available:
+## 🚀 Características principales
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Catálogo de servicios y proyectos destacados
+- Animaciones modernas con Framer Motion
+- Formulario de contacto integrado con EmailJS
+- Botón flotante de WhatsApp siempre visible
+- Filtros y búsqueda avanzada de proyectos
+- Responsive y optimizado para dispositivos móviles
+- Estilos personalizados con Tailwind CSS
 
-## Expanding the ESLint configuration
+## 📦 Instalación y desarrollo local
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Clona el repositorio:
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/Xlugner/Franky-S.U.R.L.git
+cd herrerias-franky
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Instala las dependencias:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+3. Inicia el servidor de desarrollo:
+
+```bash
+npm run dev
+```
+
+4. Accede a `http://localhost:5173` en tu navegador.
+
+## 🛠️ Scripts útiles
+
+- `npm run dev` — Inicia el entorno de desarrollo
+- `npm run build` — Genera el build de producción
+- `npm run preview` — Previsualiza el build localmente
+- `npm run lint` — Ejecuta ESLint
+
+## 🌐 Deploy en Vercel
+
+1. Sube tu proyecto a GitHub.
+2. Ve a [Vercel](https://vercel.com/) y crea un nuevo proyecto importando tu repo.
+3. Vercel detecta automáticamente Vite y ejecuta `npm run build`.
+4. El directorio de salida es `dist`.
+5. El sitio estará disponible en una URL pública.
+
+## 📲 Contacto y soporte
+
+- WhatsApp: [Click aquí](https://wa.me/5358014616)
+- Email: xerxlugner777@gmail.com
+
+## 📁 Estructura del proyecto
+
+```
+herrerias-franky/
+├── public/
+├── src/
+│   ├── components/
+│   ├── core/
+│   ├── pages/
+│   ├── assets/
+│   └── ...
+├── package.json
+├── tailwind.config.js
+├── vite.config.ts
+└── ...
+```
+
+## 📝 Licencia
+
+Este proyecto es privado y para uso exclusivo de Herrerías Franky S.U.R.L.

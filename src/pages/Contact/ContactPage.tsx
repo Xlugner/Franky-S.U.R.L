@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import emailjs from '@emailjs/browser';
 import AnimatedPage from "../../components/ui/AnimatedPage";
 import { Phone, Send, MapPin, Mail } from "lucide-react";
@@ -8,6 +8,7 @@ const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_4
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_48dmfl3';
 const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'cmoIvJCdONnoqUBZy';
 
+
 const ContactPage = () => {
     const [formData, setFormData] = useState({
         name: '',
@@ -16,6 +17,15 @@ const ContactPage = () => {
         message: ''
     });
     const [status, setStatus] = useState('');
+
+    // Leer el parámetro 'asunto' de la URL y prellenar el campo subject
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const asunto = params.get('asunto');
+        if (asunto) {
+            setFormData(prev => ({ ...prev, subject: asunto }));
+        }
+    }, []);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
@@ -138,15 +148,15 @@ const ContactPage = () => {
                             <div className="space-y-6 text-lg text-text-light">
                                 <p className="flex items-center">
                                     <Phone className="mr-4 h-6 w-6 text-accent-gold" /> 
-                                    <a href="tel:+34123456789" className="hover:text-accent-gold-light transition-colors">+34 123 456 789</a>
+                                    <a href="tel:+53 51089594" className="hover:text-accent-gold-light transition-colors">+53 51089594</a>
                                 </p>
                                 <p className="flex items-center">
                                     <Mail className="mr-4 h-6 w-6 text-accent-gold" /> 
-                                    <a href="mailto:info@frankyherreria.com" className="hover:text-accent-gold-light transition-colors">info@frankyherreria.com</a>
+                                    <a href="mailto:leyvamatamoro@gmail.com" className="hover:text-accent-gold-light transition-colors">leyvamatamoro@gmail.com</a>
                                 </p>
                                 <p className="flex items-start">
                                     <MapPin className="mr-4 h-6 w-6 text-accent-gold flex-shrink-0 mt-1" /> 
-                                    <span>Calle Ficticia 123, <br/> 08001 Ciudad, País</span>
+                                    <span>Calle Línea #178 entre 12 y Manuel del Socorro,Roberto Reyes <br/> Granma, Cuba</span>
                                 </p>
                             </div>
                             <div className="mt-8">

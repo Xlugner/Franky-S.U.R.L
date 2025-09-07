@@ -45,13 +45,20 @@ const ProjectsPage = () => {
         sessionStorage.setItem('filteredProjects', JSON.stringify(results));
     }, [searchTerm, selectedCategory]);
 
-    // Load saved filters from session storage on component mount
+
+    // Al montar, si hay ?categoria= en la URL, selecciona esa categoría
     useEffect(() => {
-        const savedFilters = sessionStorage.getItem('projectFilters');
-        if (savedFilters) {
-            const { search, category } = JSON.parse(savedFilters);
-            setSearchTerm(search || '');
-            setSelectedCategory(category || 'todos');
+        const params = new URLSearchParams(window.location.search);
+        const cat = params.get('categoria');
+        if (cat) {
+            setSelectedCategory(cat);
+        } else {
+            const savedFilters = sessionStorage.getItem('projectFilters');
+            if (savedFilters) {
+                const { search, category } = JSON.parse(savedFilters);
+                setSearchTerm(search || '');
+                setSelectedCategory(category || 'todos');
+            }
         }
     }, []);
 

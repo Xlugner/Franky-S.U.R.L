@@ -1,76 +1,98 @@
 import type { Service, Project } from './types';
-import { Home, Wrench, Building, Sparkles } from 'lucide-react';
+import {  ComputerIcon, Building, Hammer, PaintRollerIcon, BedDouble, ArmchairIcon, ShoppingBagIcon,TruckElectric,WashingMachine } from 'lucide-react';
+//Camas
+import BedOne from '../assets/gallery/cama 1.webp';
+import BedTwo from '../assets/gallery/cama 2.webp';
+import BedThree from '../assets/gallery/cama 3.webp';
+import BedFour from '../assets/gallery/cama y mesita 1.webp';
+import BedFive from '../assets/gallery/cama y mesita 2.webp';
+//Simples de hierro
+import ChairOne from '../assets/gallery/banqueta 1.webp';
+import ChairTwo from '../assets/gallery/banqueta 2.webp';
+import TableOne from '../assets/gallery/mesita 1.webp';
+import PaloOne from '../assets/gallery/palo 1.webp';
+//Zoo
+import ZooOne from '../assets/Zoo/Zoo 1.png';
+import ZooTwo from '../assets/Zoo/Zoo 2.png';
+import ZooThree from '../assets/Zoo/Zoo 3.png';
+import ZooFour from '../assets/Zoo/Zoo 4.png';
+
+
 
 export const servicesData: Service[] = [
-  { category: 'Herrería', title: 'Portones y Rejas', description: 'Diseño y fabricación de portones automáticos y rejas de seguridad a medida.', icon: Home },
-  { category: 'Herrería', title: 'Barandillas y Pasamanos', description: 'Creación de barandillas para escaleras y balcones con diseños únicos.', icon: Wrench },
-  { category: 'Construcción', title: 'Estructuras Metálicas', description: 'Construcción de vigas, columnas y techos para naves industriales y comerciales.', icon: Building },
-  { category: 'Decoración', title: 'Mobiliario de Diseño', description: 'Muebles de interior y exterior en hierro forjado: mesas, sillas, estanterías.', icon: Sparkles },
-  { category: 'Herrería', title: 'Escaleras Metálicas', description: 'Fabricamos escaleras rectas, de caracol y de diseño para cualquier espacio.', icon: Wrench },
-  { category: 'Construcción', title: 'Cerramientos y Pérgolas', description: 'Instalación de pérgolas bioclimáticas y cerramientos de alta calidad.', icon: Building },
-  { category: 'Decoración', title: 'Esculturas y Adornos', description: 'Piezas artísticas de metal para jardines y espacios interiores.', icon: Sparkles },
+  { category: 'Herrería', title: 'Servicios de fundición de hierro y acero', description: 'Elaboración de camas de tipos cameras y personales o a pedido. Elaboración de mesas, sillas, banquetas, porta bolsos, estante para baños, bases para equipos, soportes de pared para tv, mesas de noche, parrillas, rejas, marqueterías, mesas de centro, cómodas, estantes, portones y puertas, equipamientos para gimnasios, camas para masaje, mesas integrales para cafeterías, estructuras para techos, porta cubiertos, bancos para parques, taquillas, etc..', icon: BedDouble },
+  { category: 'Decoración', title: 'Elaborar y comercializar muebles', description: 'Diseño, construcción y comercialización de muebles de todo tipo (metálicos, madera, plásticos,etc.) a solicitud del cliente.', icon: ArmchairIcon },
+  { category: 'Construcción', title: 'Construcción civil y montaje de nuevas obras', description: 'Construcción de viviendas de diferentes tipologías, almacenes, talleres, casetas, garitas, cercados perimetrales, cisternas, filtros sanitarios, naves.', icon: Hammer },
+  { category: 'Decoración', title: 'Diseños gráficos.', description: 'Diseños de carteles, slogan, logotipos para empresas y personas naturales.', icon: ComputerIcon },
+  { category: 'Decoración', title: 'Decoración de interior y diseño y confección de moda', description: 'Diseño de telas para confección de cortinas, sabanas, manteles y ropas: diseño de prendas de vestir para adultos y niños, diseño calzado y joyas: decoración de interiores, etc.', icon: ShoppingBagIcon },
+  { category: 'Construcción', title: 'Terminación y acabado de edificios.', description: 'Pintura de edificaciones, rehabilitación de estructuras de hormigón y metálicas, sustitución y mejoramiento de pisos, sustitución de carpinterías, colocación de falso techos, enchapes de mesetas, baños y muros, elaboración y colocación de rejas de protección, colocación de cubiertas en techos.', icon: PaintRollerIcon },
+  { category: 'Construcción', title: 'Esculturas y Instalaciones eléctricas', description: 'Instalaciones eléctricas integrales, colocación alumbrado público y en interior de instalaciones, instalación de paneles fotovoltaicos, elaboración e instalación de pizarras para todo tipo de equipos.', icon: TruckElectric },
+  { category: 'Construcción', title: 'Instalaciones de fontanería y aire acondicionado', description: 'Rehabilitación e Instalaciones hidráulico-sanitarias en baños, montaje y desmontaje de aparatos sanitarios, reparación y sustitución de herrajes de tanques de tasas sanitarias, montaje de tanques con instalación hidráulica, instalación de aires acondicionados de todo tipo.', icon: WashingMachine },
+  { category: 'Construcción', title: 'Actividades especializadas de construcción', description: 'Impermeabilización de cubiertas (mantas, rasilla, atesados, pintura), rehabilitación de piscinas, construcción de fosas mouras, sistemas de drenaje de aguas pluviales y albañales, construcción de lagunas y estanques.', icon: Building },
 ];
 
 export const projectsData: Project[] = [
   {
     id: 1,
-    title: "Residencia Moderna",
-    description: "Portón y vallas para una residencia de lujo en zona residencial exclusiva.",
-    imageUrl: "https://placehold.co/600x400/1a202c/a0aec0?text=Residencia+Moderna",
+    title: "Camas de hierro",
+    description: "Camas de tipos cameras y personales hechas a pedidos y a medida",
+    imageUrl: BedOne,
     gallery: [
-      "https://placehold.co/800x600/1a202c/a0aec0?text=Residencia+1",
-      "https://placehold.co/800x600/2d3748/a0aec0?text=Residencia+2",
-      "https://placehold.co/800x600/4a5568/a0aec0?text=Residencia+3"
+      BedOne,
+      BedTwo,
+      BedThree,
+      BedFour,
+      BedFive
     ],
-    tags: ["portones", "rejas", "residencial"],
-    categories: ["Herrería", "Residencial"],
+    tags: ["camas", "bastidor"],
+    categories: ["Herrería", "Comercial"],
     status: "Completado",
-    location: "Buenos Aires",
-    year: 2023,
+    location: "Granma",
+    year: 2025,
     details: {
-      area: "25 m²",
       duration: "2 semanas",
-      materials: ["Acero inoxidable", "Vidrio templado"]
+      materials: ["Acero inoxidable", "Madera Caoba"]
     }
   },
   {
     id: 2,
-    title: "Nave Industrial",
-    description: "Estructura metálica completa para centro logístico en zona industrial.",
-    imageUrl: "https://placehold.co/600x800/1a202c/a0aec0?text=Nave+Industrial",
+    title: "Trabajos simples con hierro",
+    description: "Elaboraciones de hierro simples como mesitas de noche,porta bolsos,etc.",
+    imageUrl: ChairOne,
     gallery: [
-      "https://placehold.co/800x600/1a202c/a0aec0?text=Nave+1",
-      "https://placehold.co/800x600/2d3748/a0aec0?text=Nave+2"
+      ChairOne,
+      ChairTwo,
+      PaloOne,
+      TableOne
     ],
-    tags: ["estructuras", "industrial", "galpón"],
-    categories: ["Construcción", "Industrial"],
-    status: "En progreso",
-    location: "Córdoba",
-    year: 2024,
+    tags: ["mesita de noche", "porta bolso", "banqueta"],
+    categories: ["Herrería", "Decoración","Comercial"],
+    status: "Completado",
+    location: "Granma",
+    year: 2025,
     details: {
-      area: "1500 m²",
-      duration: "3 meses",
+      duration: "1 semana",
       materials: ["Perfiles de acero", "Chapas acanaladas"]
     }
   },
   {
     id: 3,
-    title: "Cafetería 'El Forjado'",
-    description: "Mobiliario y detalles decorativos en hierro para cafetería de autor.",
-    imageUrl: "https://placehold.co/600x600/1a202c/a0aec0?text=Cafetería+El+Forjado",
+    title: "Parque Zoológico Cayo Coco",
+    description: "Restauración y creación de nuevas áreas en el parque del zoológico de Cayo Coco.",
+    imageUrl: ZooOne,
     gallery: [
-      "https://placehold.co/800x600/1a202c/a0aec0?text=Cafetería+1",
-      "https://placehold.co/800x600/2d3748/a0aec0?text=Cafetería+2",
-      "https://placehold.co/800x600/4a5568/a0aec0?text=Cafetería+3"
+      ZooOne,
+      ZooTwo,
+      ZooThree,
+      ZooFour
     ],
-    tags: ["mobiliario", "decoración", "interiores"],
-    categories: ["Decoración", "Comercial"],
-    status: "Completado",
-    location: "Mendoza",
-    year: 2023,
+    tags: ["obras públicas", "acero", "exteriores"],
+    categories: ["Construcción", "Obra Pública"],
+    status: "En progreso",
+    location: "Matanzas",
+    year: 2025,
     details: {
-      area: "120 m²",
-      duration: "1 mes",
+      duration: "4 meses",
       materials: ["Hierro forjado", "Madera reciclada"]
     }
   },
@@ -89,7 +111,6 @@ export const projectsData: Project[] = [
     location: "Rosario",
     year: 2021,
     details: {
-      area: "30 m de largo",
       duration: "2 meses",
       materials: ["Acero estructural", "Pintura epoxi"]
     }
@@ -109,7 +130,6 @@ export const projectsData: Project[] = [
     location: "Bariloche",
     year: 2024,
     details: {
-      area: "500 m²",
       duration: "3 semanas",
       materials: ["Acero corten", "Piedra"]
     }
@@ -129,7 +149,6 @@ export const projectsData: Project[] = [
     location: "San Juan",
     year: 2024,
     details: {
-      area: "Fachada completa",
       duration: "6 meses",
       materials: ["Hierro forjado", "Pátinas especiales"]
     }

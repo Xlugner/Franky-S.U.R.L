@@ -8,7 +8,6 @@ export type Service = {
 };
 
 export type ProjectDetails = {
-  area?: string;
   duration?: string;
   materials?: string[];
 };

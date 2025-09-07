@@ -95,7 +95,7 @@ const AboutPreview = ({ navigate }: { navigate: (path: string) => void }) => {
             variants={itemVariants}
             className="text-lg md:text-xl text-text-light leading-relaxed max-w-4xl mx-auto"
           >
-            En <span className="text-accent-gold font-semibold">Herrerías Franky S.U.R.L.</span>, fusionamos la tradición artesanal con la innovación para crear piezas únicas y duraderas en metal. Nuestra pasión por la calidad y el diseño nos impulsa a superar las expectativas en cada proyecto.
+            En <span className="text-accent-gold font-semibold">Franky S.U.R.L.</span>, fusionamos la tradición artesanal con la innovación para crear piezas únicas y duraderas en metal. Nuestra pasión por la calidad y el diseño nos impulsa a superar las expectativas en cada proyecto.
           </motion.p>
         </motion.div>
         
@@ -116,8 +116,8 @@ const AboutPreview = ({ navigate }: { navigate: (path: string) => void }) => {
             <div className="bg-accent-gold/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
               <Award className="w-8 h-8 text-accent-gold" />
             </div>
-            <AnimatedCounter value={15} suffix="+" label="Años de Experiencia" />
-            <p className="mt-4 text-text-light text-sm">Más de 15 años creando soluciones en metal</p>
+            <AnimatedCounter value={4} suffix="+" label="Años de Experiencia" />
+            <p className="mt-4 text-text-light text-sm">Más de 4 años creando soluciones en metal</p>
           </motion.div>
           
           <motion.div
@@ -136,7 +136,7 @@ const AboutPreview = ({ navigate }: { navigate: (path: string) => void }) => {
             <div className="bg-accent-gold/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
               <CheckCircle className="w-8 h-8 text-accent-gold" />
             </div>
-            <AnimatedCounter value={500} suffix="+" label="Proyectos Completados" />
+            <AnimatedCounter value={35} suffix="+" label="Proyectos Completados" />
             <p className="text-text-light text-sm">Satisfacción garantizada en cada trabajo</p>
           </motion.div>
           

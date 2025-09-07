@@ -4,7 +4,7 @@ import React from "react";
 // Componente flotante de WhatsApp
 const WhatsAppButton: React.FC = () => (
     <motion.a
-        href="https://wa.me/5358014616"
+        href="https://wa.me/+53 51089594"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 bg-accent-gold-dark hover:bg-accent-gold-dark text-white rounded-full shadow-lg p-4 flex items-center justify-center"

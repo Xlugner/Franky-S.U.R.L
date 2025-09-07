@@ -72,7 +72,7 @@ const ServicesPreview: React.FC<ServicesPreviewProps> = ({ navigate }) => {
                                     }
                                 }
                             }}
-                            className="group bg-gradient-to-b from-primary-dark to-secondary-dark/80 p-8 rounded-xl text-center flex flex-col items-center shadow-2xl border border-gray-700/50 hover:border-accent-gold/50 transition-all duration-500 hover:-translate-y-2 will-change-transform"
+                            className="group bg-gradient-to-b from-primary-dark to-secondary-dark/80 p-8 rounded-xl text-center flex flex-col items-center shadow-2xl border border-gray-700/50 hover:border-accent-gold/50 transition-all duration-500 hover:-translate-y-2 will-change-transform h-96"
                         >
                             <div className="bg-accent-gold/10 p-5 rounded-full mb-6 transition-all duration-500 group-hover:bg-accent-gold/20 group-hover:scale-110">
                                 <service.icon className="h-12 w-12 text-accent-gold group-hover:text-accent-gold-light transition-colors duration-500" />
@@ -80,9 +80,11 @@ const ServicesPreview: React.FC<ServicesPreviewProps> = ({ navigate }) => {
                             <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-accent-gold-light transition-colors duration-300">
                                 {service.title}
                             </h3>
+                            <div className="overflow-y-auto flex-grow scrollbar-hide">
                             <p className="text-text-light mb-6 flex-grow leading-relaxed">
                                 {service.description}
                             </p>
+                            </div>
                             <button
                                 onClick={() => navigate(`/servicios#${service.title.toLowerCase().replace(/\s+/g, "-")}`)}
                                 className="mt-auto flex items-center gap-2 bg-accent-gold-dark/90 text-primary-dark font-semibold py-2.5 px-6 rounded-lg hover:bg-accent-gold transition-all duration-300 shadow-md group-hover:shadow-accent-gold/30"

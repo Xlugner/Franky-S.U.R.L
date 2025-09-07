@@ -29,7 +29,7 @@ const Navbar = ({ navigate }: { navigate: (path: string) => void }) => {
             <h1 className="text-accent-gold text-3xl font-extrabold tracking-tight">
               Franky <span className="text-accent-gold">S.U.R.L.</span>
             </h1>
-            <p className="text-gray-400 text-xs sm:text-sm tracking-widest uppercase">Herrería & Decoración</p>
+            <p className="text-gray-400 text-xs sm:text-sm tracking-widest uppercase">Construcción, Herrería & Decoración</p>
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-6">

@@ -266,12 +266,6 @@ const ProjectCard = ({
                                 <p className="text-gray-300 max-w-2xl mx-auto">{project.description}</p>
                                 
                                 <div className="mt-4 flex flex-wrap justify-center gap-4 text-sm">
-                                    {project.details?.area && (
-                                        <div>
-                                            <span className="text-gray-400">Área: </span>
-                                            <span>{project.details.area}</span>
-                                        </div>
-                                    )}
                                     {project.details?.duration && (
                                         <div>
                                             <span className="text-gray-400">Duración: </span>

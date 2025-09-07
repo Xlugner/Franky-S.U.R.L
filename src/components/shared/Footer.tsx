@@ -7,22 +7,22 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div className="space-y-4">
-            <h3 className="text-xl font-bold text-white mb-2">Herrerías Franky S.U.R.L.</h3>
+            <h3 className="text-xl font-bold text-white mb-2">Franky S.U.R.L.</h3>
             <p className="text-gray-400 leading-relaxed">Forjando ideas, construyendo realidades con pasión y precisión. Expertos en herrería artística, estructuras y decoración.</p>
           </div>
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-white mb-2">Contacto Rápido</h3>
             <p className="flex items-center text-text-light hover:text-accent-gold transition-colors">
                 <Phone className="mr-3 h-5 w-5 text-accent-gold" /> 
-                <a href="tel:+34123456789">+34 123 456 789</a>
+                <a href="tel:+34123456789">+53 51089594</a>
             </p>
             <p className="flex items-center text-text-light hover:text-accent-gold transition-colors">
                 <Send className="mr-3 h-5 w-5 text-accent-gold" /> 
-                <a href="mailto:info@frankyherreria.com">info@frankyherreria.com</a>
+                <a href="mailto:info@frankyherreria.com">leyvamatamoro@gmail.com</a>
             </p>
             <p className="flex items-center text-text-light">
                 <MapPin className="mr-3 h-5 w-5 text-accent-gold" /> 
-                Calle Ficticia 123, Ciudad, País
+                Calle Línea #178 entre 12 y Manuel del Socorro,Roberto Reyes, Bayamo-Granma
             </p>
           </div>
           <div className="space-y-4">

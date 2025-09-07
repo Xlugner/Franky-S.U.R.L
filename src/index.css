@@ -1,3 +1,11 @@
+/* Utilidad para ocultar la barra de scroll (scrollbar-hide) */
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE y Edge */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari y Opera */
+}
 /* src/index.css */
 
 /* Directivas esenciales de Tailwind CSS */
