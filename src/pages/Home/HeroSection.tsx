@@ -59,24 +59,26 @@ const Typewriter: React.FC<TypewriterProps> = ({
 
 //--- Componente para el Fondo (Video y Overlay) ---
 const HeroBackground: React.FC = () => {
-    const [isVideoLoaded, setIsVideoLoaded] = useState(false);
     return (
         <>
             <div
-                className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${isVideoLoaded ? "opacity-0" : "opacity-100"}`}
+                className="absolute inset-0 bg-cover bg-center"
                 style={{
                     backgroundImage: "url('https://images.unsplash.com/photo-1605000797499-95a51c5269ae?q=80&w=2071&auto=format&fit=crop')",
-                    filter: "blur(4px)"
+                    filter: "blur(4px)",
+                    zIndex: 0
                 }}
             />
             <video
-                autoPlay loop muted playsInline
-                className="absolute w-auto min-w-full min-h-full max-w-none transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover transition-opacity duration-1000"
-                style={{ opacity: isVideoLoaded ? 1 : 0 }}
-                onLoadedData={() => setIsVideoLoaded(true)}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute w-auto min-w-full min-h-full max-w-none transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover"
+                style={{ opacity: 1, zIndex: 1 }}
                 preload="metadata"
             >
-                <source src="../../assets/bg-video.mp4"  type="video/mp4" />
+                <source src="/bg-video.mp4" type="video/mp4" />
                 Tu navegador no soporta la etiqueta de video.
             </video>
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70 z-10"></div>
