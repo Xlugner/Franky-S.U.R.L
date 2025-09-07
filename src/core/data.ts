@@ -12,10 +12,10 @@ import ChairTwo from '../assets/gallery/banqueta 2.webp';
 import TableOne from '../assets/gallery/mesita 1.webp';
 import PaloOne from '../assets/gallery/palo 1.webp';
 //Zoo
-import ZooOne from '../assets/Zoo/Zoo 1.png';
-import ZooTwo from '../assets/Zoo/Zoo 2.png';
-import ZooThree from '../assets/Zoo/Zoo 3.png';
-import ZooFour from '../assets/Zoo/Zoo 4.png';
+import ZooOne from '../assets/Zoo/Zoo 1.webp';
+import ZooTwo from '../assets/Zoo/Zoo 2.webp';
+import ZooThree from '../assets/Zoo/Zoo 3.webp';
+import ZooFour from '../assets/Zoo/Zoo 4.webp';
 
 
 
