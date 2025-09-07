@@ -161,7 +161,7 @@ const ContactPage = () => {
                             </div>
                             <div className="mt-8">
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3167.334468603417!2d-0.4578844846931551!3d37.99229987972033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd637956b9c9f2b1%3A0x6a5d4e1f7c2b3a1a!2sPlaza%20de%20Luceros%2C%20Alicante!5e0!3m2!1ses!2ses!4v1678901234567!5m2!1ses!2ses"
+                                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d698.9729715903794!2d-76.6387869644632!3d20.370832251724757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scu!4v1757279233714!5m2!1ses-419!2scu"
                                     width="100%"
                                     height="300"
                                     style={{ border: 0 }}
